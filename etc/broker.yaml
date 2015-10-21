@@ -1,0 +1,8 @@
+#broker地址
+addr : 0.0.0.0:9595
+#redis地址
+redis : 127.0.0.1:6379
+#log输出到文件，可不配置
+#log_path: /Users/flike/src 
+#日志级别
+log_level: debug

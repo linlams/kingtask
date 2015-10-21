@@ -1,0 +1,30 @@
+{
+	"ImportPath": "github.com/flike/kingtask",
+	"GoVersion": "go1.5.1",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/flike/golog",
+			"Rev": "d59ac6dad9f09769d00642a7431b8f32823fb9f6"
+		},
+		{
+			"ImportPath": "github.com/pborman/uuid",
+			"Rev": "cccd189d45f7ac3368a0d127efb7f4d08ae0b655"
+		},
+		{
+			"ImportPath": "gopkg.in/bsm/ratelimit.v1",
+			"Rev": "bda20d5067a03094fc6762f7ead53027afac5f28"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v3",
+			"Comment": "v3.2.11",
+			"Rev": "5d95a32e251b7a05692d61aa8648231e1b7b906f"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "7ad95dd0798a40da1ccdff6dff35fd177b5edf40"
+		}
+	]
+}
