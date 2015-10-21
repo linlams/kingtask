@@ -1,5 +1,5 @@
 # 1. kingtask简介
-kingtask是一个由Go开发的异步任务系统。主要特性包含以下几个部分：
+kingtask是一个由Go开发的轻量级的异步定时任务系统。主要特性包含以下几个部分：
 
 1. 支持定时的异步任务。
 2. 支持失败重试机制，重试时刻和次数可自定义。
@@ -21,7 +21,18 @@ kingshard的实现步骤如下所述：
 
 # 3. kingtask使用
 
-## 3.1 配置broker
+## 3.1 编译和安装
+
+```
+1. 安装Godep
+go get github.com/tools/godep
+2.执行 sh ./dev.sh
+3.make
+在bin目录下就会生成可执行文件
+
+```
+
+## 3.2 配置broker
 
 ```
 #broker地址
@@ -34,7 +45,7 @@ redis : 127.0.0.1:6379
 log_level: debug
 ```
 
-# 3.2 配置worker
+## 3.3 配置worker
 
 ```
 #broker地址
@@ -56,7 +67,7 @@ result_keep_time : 1000
 task_run_time: 30
 ```
 
-## 3.3 运行broker和worker
+## 3.4 运行broker和worker
 
 ```
 #将异步任务的可执行文件放到bin_path目录
@@ -69,7 +80,7 @@ cd kingtask
 ./bin/worker -config=etc/worker.yaml
 ```
 
-### 3.3.1 example异步任务源码
+## 3.5 example异步任务源码
 
 异步任务的结果需要输出到标准输出(os.Stdout),出错信息需要输出到标准出错输出(os.Stderr)。
 
@@ -104,7 +115,7 @@ func main() {
 
 ```
 
-### 3.3.2 调用异步任务源码
+## 3.6 调用异步任务源码
 
 ```
 //mytask.go
